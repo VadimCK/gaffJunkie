@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gaffJunkie trolly</title>
+</head>
+<body>
+<div style="font-family: Arial">
+	<ul style="display: block; min-height: 75px; list-style: none; margin: 0; padding: 0;">
+		<% for p in @properties %>
+		<li style="border-bottom:1px #999 solid; min-height:100px;margin-bottom:5px;">
+		<img style="margin-right:5px;min-height:75px;" align="left" src="<%=p.thumb%>">
+			<ul style="list-style: none; margin: 0; padding: 0;">
+				<li><h3 style="padding:0;margin:0"><%=p.title%></h3></li>
+				<li><strong>Address:</strong> <%=p.address%></li>
+				<li><strong>Bathrooms:</strong> <%=p.bath%></li>
+				<li><strong>Sq. foot:</strong> <%=p.sqft%></li>
+				<li><strong>Monthly Rent:</strong> <%=p.rent%></li>
+				<li><a href="<%=p.zillow_url%>">View Zillow</a></li>
+				<li><a href="<%=p.google_maps_url%>">View Google Maps</a></li>
+			</ul>
+		</li>
+		<% end %>
+	</ul>
+</body>
+</html>
